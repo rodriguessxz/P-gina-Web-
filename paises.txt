@@ -1,0 +1,12 @@
+1,Brasil
+2,Argentina
+3,Bolívia
+4,Paraguai
+5,Chile
+6,Venezuela
+7,Colombia
+8,Peru
+9,Uruguai
+10,Equador
+11,Suiça
+12,Suiça

@@ -1,0 +1,141 @@
+/* Resetando estilos padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #003366;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* Links */
+a {
+    color: #003366;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #0066cc;
+}
+
+/* Container principal */
+.container {
+    width: 90%;
+    margin: 30px auto;
+    background-color: white;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 30px;
+}
+
+/* Botões personalizados */
+button {
+    padding: 12px 20px;
+    background-color: #003366;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0055a5;
+}
+
+/* Estilo de tabelas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+th {
+    background-color: #003366;
+    color: white;
+    font-size: 1.1rem;
+}
+
+td {
+    background-color: #f9f9f9;
+}
+
+tr:hover td {
+    background-color: #f1f1f1;
+}
+
+tr:nth-child(odd) td {
+    background-color: #fafafa;
+}
+
+/* Efeitos de transição nas tabelas */
+table, th, td {
+    transition: all 0.3s ease;
+}
+
+/* Rodapé */
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
+    font-size: 1rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    table, th, td {
+        font-size: 0.9rem;
+    }
+
+    button {
+        width: 100%;
+        padding: 15px;
+    }
+}

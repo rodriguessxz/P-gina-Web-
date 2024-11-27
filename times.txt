@@ -1,0 +1,32 @@
+T1,1,São Paulo
+T2,1,Fluminense
+T3,1,Botafogo
+T4,1,Palmeiras
+T5,1,Atlético-MG
+T6,1,Flamengo
+T7,2,River Plate
+T8,2,Talleres
+T9,2,Rosario Central
+T10,2,San Lorenzo
+T11,3,The Strongest
+T12,3,Bolívar
+T13,4,Libertad
+T14,4,Cerro Porteño
+T15,4,Trinidense
+T16,5,Cobresal
+T17,6,Portuguesa
+T18,6,Deportivo Táchira
+T19,6,Caracas
+T20,6,Puerto Cabello
+T21,7,Millonarios
+T22,7,Atlético Nacional
+T23,8,Alianza Lima
+T24,8,Sporting Cristal
+T25,8,Universitario
+T26,8,Melgar
+T27,9,Peñarol
+T28,9,Liverpool
+T29,10,LDU
+T30,10,Independiente del Valle
+T31,10,Barcelona SC
+T32,10,El Nacional

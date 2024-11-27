@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Países Participantes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script defer src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+<body>
+    <header>
+        <h1>Países da Copa Libertadores 2024</h1>
+    </header>
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>País</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for pais in paises %}
+                    <tr>
+                        <td>{{ pais[0] }}</td>
+                        <td>{{ pais[1] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="/">Voltar à página inicial</a>
+    </div>
+    <footer>
+        <p>&copy; 2024 Copa Libertadores</p>
+    </footer>
+</body>
+</html>

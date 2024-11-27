@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copa Libertadores 2024</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+    <style>
+        /* Reset básico de estilos */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #005c5c;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.1rem;
+            padding: 8px 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #007c7c;
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        main h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .content {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .content p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: #005c5c;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        footer p {
+            font-size: 1rem;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+            display: inline-block;
+        }
+
+        footer a:hover {
+            color: #009e9e;
+        }
+
+        /* Animação de entrada da página */
+        .fadeIn {
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="fadeIn">
+        <h1>Bem-vindo à Copa Libertadores 2024!</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Página Inicial</a></li>
+                <li><a href="/paises">Países</a></li>
+                <li><a href="/times">Times</a></li>
+                <li><a href="/titulos">Títulos</a></li>
+                <li><a href="/jogadores">Jogadores</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="fadeIn">
+        <section class="content">
+            <h2>Sobre a Copa Libertadores 2024</h2>
+            <p>A Copa Libertadores de 2024 promete ser uma das edições mais emocionantes da história, com times de grande tradição e novas forças do futebol sul-americano se enfrentando em busca do título continental. Desde sua criação em 1960, a competição tem sido palco de grandes histórias, rivalidades e conquistas épicas.</p>
+
+            <p>Com a participação de clubes de peso como Flamengo, Palmeiras, River Plate, São Paulo e muitos outros, a Copa Libertadores 2024 traz expectativas de duelos intensos e jogos de alto nível. Prepare-se para acompanhar as melhores equipes da América do Sul em sua jornada pela glória internacional!</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Copa Libertadores | Todos os direitos reservados</p>
+        <a href="/adicionar">Adicionar novo dado</a>  <!-- Link para adicionar novo dado -->
+    </footer>
+
+    <script>
+        // Exemplo de efeito simples com JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('nav ul li a');
+            links.forEach(link => {
+                link.addEventListener('mouseover', () => {
+                    link.style.backgroundColor = '#009e9e';
+                });
+
+                link.addEventListener('mouseout', () => {
+                    link.style.backgroundColor = '#007c7c';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

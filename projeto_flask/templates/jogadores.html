@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogadores Campeões</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script defer src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+<body>
+    <header>
+        <h1>Jogadores Campeões da Libertadores</h1>
+    </header>
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome do Jogador</th>
+                    <th>Ano do Título</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for jogador in jogadores %}
+                    <tr>
+                        <td>{{ jogador[0] }}</td>  <!-- Nome do Jogador -->
+                        <td>{{ jogador[1] }}</td>  <!-- Ano do Título -->
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="/">Voltar à página inicial</a>
+    </div>
+    <footer>
+        <p>&copy; 2024 Copa Libertadores</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Dados</title>
+    <style>
+        /* Estilo básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #004d4d;
+            color: #fff;
+            text-align: center;
+            padding: 20px 10px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 900px;
+            margin: 20px auto;
+        }
+
+        section {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #004d4d;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+            border-bottom: 2px solid #004d4d;
+            padding-bottom: 5px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input, select, button {
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        button {
+            background-color: #004d4d;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #007373;
+        }
+
+        select {
+            appearance: none;
+        }
+
+        option:disabled {
+            color: gray;
+        }
+
+        /* Responsividade */
+        @media (max-width: 600px) {
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Adicionar Dados</h1>
+    </header>
+    <main>
+        <!-- Adicionar País -->
+        <section>
+            <h2>Adicionar País</h2>
+            <form id="formPais" method="POST" action="/adicionar">
+                <label for="pais">Nome do País:</label>
+                <input type="text" id="pais" name="pais" placeholder="Exemplo: Brasil" required>
+                <button type="submit">Adicionar País</button>
+            </form>
+        </section>
+
+        <!-- Adicionar Time -->
+        <section>
+            <h2>Adicionar Time</h2>
+            <form id="formTime" method="POST" action="/adicionar">
+                <label for="time">Nome do Time:</label>
+                <input type="text" id="time" name="time" placeholder="Exemplo: Flamengo" required>
+                <label for="pais_id_time">País do Time:</label>
+                <select id="pais_id_time" name="pais_id_time" required>
+                    <option value="" disabled selected>Escolha o país</option>
+                    {% for pais in paises %}
+                        <option value="{{ pais[0] }}">{{ pais[1] }}</option>
+                    {% endfor %}
+                </select>
+                <button type="submit">Adicionar Time</button>
+            </form>
+        </section>
+
+        <!-- Adicionar Título -->
+        <section>
+            <h2>Adicionar Título</h2>
+            <form id="formTitulo" method="POST" action="/adicionar">
+                <label for="ano_titulo">Ano do Título:</label>
+                <input type="number" id="ano_titulo" name="ano_titulo" placeholder="Exemplo: 2023" required>
+                
+                <label for="time_id_titulo">Time que conquistou o Título:</label>
+                <select id="time_id_titulo" name="time_id_titulo" required>
+                    <option value="" disabled selected>Escolha o time</option>
+                    {% for time in times %}
+                        <option value="{{ time[0] }}">{{ time[2] }}</option> <!-- Exibe o nome do time -->
+                    {% endfor %}
+                </select>
+                
+                <button type="submit">Adicionar Título</button>
+            </form>
+        </section>
+        
+
+
+        <!-- Adicionar Jogador -->
+        <section>
+            <h2>Adicionar Jogador</h2>
+            <form id="formJogador" method="POST" action="/adicionar">
+                <label for="jogador">Nome do Jogador:</label>
+                <input type="text" id="jogador" name="jogador" placeholder="Exemplo: Neymar" required>
+                <label for="ano_jogador">Ano do Título:</label>
+                <input type="number" id="ano_jogador" name="ano_jogador" placeholder="Exemplo: 2023" required>
+                <button type="submit">Adicionar Jogador</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

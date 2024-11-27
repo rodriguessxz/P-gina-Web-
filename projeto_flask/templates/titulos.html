@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Títulos da Copa</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script defer src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+<body>
+    <header>
+        <h1>Títulos da Copa Libertadore dos Times de 2024</h1>
+    </header>
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Ano</th>
+                    <th>ID do Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for titulo in titulos %}
+                    <tr>
+                        <td>{{ titulo[0] }}</td>  <!-- Exibe o Ano -->
+                        <td>{{ titulo[1] }}</td>  <!-- Exibe o ID do Time -->
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="/">Voltar à página inicial</a>
+    </div>
+    <footer>
+        <p>&copy; 2024 Copa Libertadores</p>
+    </footer>
+</body>
+</html>

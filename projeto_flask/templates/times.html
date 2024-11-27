@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Times Participantes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script defer src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+<body>
+    <header>
+        <h1>Times da Copa Libertadores 2024</h1>
+    </header>
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID do Time</th>
+                    <th>ID do País</th>
+                    <th>Nome do Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for time in times %}
+                    <tr>
+                        <td>{{ time[0] }}</td>
+                        <td>{{ time[1] }}</td>
+                        <td>{{ time[2] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="/">Voltar à página inicial</a>
+    </div>
+    <footer>
+        <p>&copy; 2024 Copa Libertadores</p>
+    </footer>
+</body>
+</html>
